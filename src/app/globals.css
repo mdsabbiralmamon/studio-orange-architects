@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'afacad';
+  src: url('/fonts/afacad.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'afacad', sans-serif; 
+}
