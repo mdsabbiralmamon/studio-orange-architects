@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 interface SiteInfo {
@@ -82,7 +82,7 @@ const SiteLinksPage = () => {
       {siteInfo ? (
         <div className="flex items-center bg-white p-4 rounded-md shadow-lg">
           {/* Site Image */}
-          <Image
+          <img
             src={siteInfo.logo}
             alt={siteInfo.name}
             className="w-24 h-24 object-cover rounded-md"
