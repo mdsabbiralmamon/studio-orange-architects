@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import Box from '@mui/material/Box';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { RxCross1 } from 'react-icons/rx';
 import { CiFacebook, CiInstagram } from 'react-icons/ci';
@@ -71,7 +71,7 @@ const Navbar: React.FC<NavbarProps> = ({ textClass }) => {
         <Box sx={{ width: '100%', height: '100%' }} role="presentation">
             <div className="md:grid grid-cols-3 h-screen">
                 <div className="col-span-2 hidden md:flex justify-center items-center bg-gray-100">
-                    <Image
+                    <img
                         src={hoveredLink ? 
                             navLinks.find(link => link.title === hoveredLink)?.img || defaultImage : 
                             defaultImage}
