@@ -2,7 +2,7 @@
 
 import Footer from '@/components/frontend/shared/Footer/Footer';
 import Navbar from '@/components/frontend/shared/Navbar/Navbar';
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useEffect, useState } from 'react';
 import PageTitle from '@/components/PageTitle/PageTitle';
 
@@ -40,7 +40,7 @@ const Page = () => {
             <Navbar />
             <div className='min-h-screen px-6 md:px-10 lg:px-20 xl:px-36 pt-5 pb-10'>
                 <div className='pb-[20px] md:pb-10 grid md:grid-cols-2 grid-cols-1 gap-4'>
-                    <Image
+                    <img
                         width={1000}
                         height={600}
                         src={studioImage.length > 0 ? studioImage[0] : "/blank-image.jpg"}
@@ -71,7 +71,7 @@ const Page = () => {
                             disciplines to create something greater than the sum of its parts.
                         </p>
                     </div>
-                    <Image
+                    <img
                         width={1000}
                         height={600}
                         src={studioImage.length > 0 ? studioImage[1] : "/blank-image.jpg"}
