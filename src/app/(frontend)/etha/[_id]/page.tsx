@@ -10,7 +10,7 @@ import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-import Image from "next/image";
+// import Image from "next/image";
 import axios from "axios";
 import { useParams } from "next/navigation";
 import Link from "next/link";
@@ -97,7 +97,7 @@ const Page = () => {
                 {product?.images?.length ? (
                   product.images.map((imgSrc, index) => (
                     <SwiperSlide key={index}>
-                      <Image
+                      <img
                         width={500}
                         height={500}
                         src={imgSrc}
@@ -108,7 +108,7 @@ const Page = () => {
                   ))
                 ) : (
                   <SwiperSlide>
-                    <Image
+                    <img
                       width={500}
                       height={500}
                       src="/placeholder-image.png"
@@ -129,7 +129,7 @@ const Page = () => {
                 {product?.images?.length ? (
                   product.images.map((imgSrc, index) => (
                     <SwiperSlide key={index}>
-                      <Image
+                      <img
                         width={100}
                         height={100}
                         src={imgSrc}
@@ -140,7 +140,7 @@ const Page = () => {
                   ))
                 ) : (
                   <SwiperSlide>
-                    <Image
+                    <img
                       width={100}
                       height={100}
                       src="/placeholder-image.png"
@@ -168,7 +168,7 @@ const Page = () => {
           <div className="grid grid-cols-3 lg:grid-cols-4 max-w-6xl  xl:mx-auto lg:mx-10 mx-5 py-10 md:py-20">
             {moreProduct.map((product) => (
               <div key={product._id} className="product-card rounded-xl group hover:bg-gray-100 md:p-4">
-                <Image
+                <img
                   src={product.images[0] || "/placeholder-image.png"}
                   alt={product.name}
                   width={300}
