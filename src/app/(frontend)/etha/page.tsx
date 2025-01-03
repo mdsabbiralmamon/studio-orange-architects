@@ -6,7 +6,7 @@ import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
 import Box from "@mui/material/Box";
 import axios from "axios";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import PageTitle from '@/components/PageTitle/PageTitle';
 import Store from "@/components/Store/Store";
@@ -85,13 +85,13 @@ const Page = () => {
     axios
       .get(`/api/projects`)
       .then((response) => {
-        console.log('API Response:', response.data); // Log full response
+        // console.log('API Response:', response.data); // Log full response
 
         const getProducts = response?.data?.projects.filter((p: Product) =>
           categories.includes(p.category)
         );
 
-        console.log('Filtered Products:', getProducts); // Log filtered products
+        // console.log('Filtered Products:', getProducts); // Log filtered products
 
         setProducts(getProducts);
         setDisplayedProducts(getProducts.slice(0, getProductsToShow()));
@@ -179,7 +179,7 @@ const Page = () => {
           displayedProducts.map((Product) => (
             <Link key={Product._id} href={`/work/${Product._id}`}>
               <div className="relative group bg-gray-200 w-full h-full md:h-60 xl:h-96 overflow-hidden">
-                <Image
+                <img
                   width={1000}
                   height={1000}
                   alt={Product.title}
