@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 interface Product {
@@ -81,11 +81,11 @@ const ProductsPage = () => {
             className="flex items-center bg-white p-4 rounded-md shadow-lg"
           >
             {/* Product Image */}
-            <Image
-              src={product.images[0]}
-              alt={product.name}
+            <img
               width={100}
               height={100}
+              src={product.images[0]}
+              alt={product.name}
               className="w-24 h-24 object-cover rounded-md"
             />
 
