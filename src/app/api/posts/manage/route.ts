@@ -84,7 +84,7 @@ export const DELETE = async (req: NextRequest) => {
     const { searchParams } = new URL(req.url);
     const id = searchParams.get("id");
 
-    console.log("Received ID:", id); // Log for debugging
+    // console.log("Received ID:", id); // Log for debugging
 
     if (!id) {
       return NextResponse.json(
@@ -107,7 +107,7 @@ export const DELETE = async (req: NextRequest) => {
       const filePath = path.join(process.cwd(), "public", deletedPost.cover);
       try {
         await fs.unlink(filePath); // Attempt to delete the cover image
-        console.log(`Deleted cover image file: ${filePath}`);
+        // console.log(`Deleted cover image file: ${filePath}`);
       } catch (err) {
         console.error(`Error deleting cover image file (${filePath}):`, err);
       }
