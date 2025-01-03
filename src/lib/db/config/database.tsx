@@ -7,7 +7,7 @@ import mongoose from "mongoose";
 const connectDB = async (): Promise<boolean> => {
   // Check if there’s already an existing MongoDB connection
   if (mongoose.connections[0].readyState) {
-    console.log("MongoDB is already connected.");
+    // console.log("MongoDB is already connected.");
     return true;
   }
 
@@ -20,7 +20,7 @@ const connectDB = async (): Promise<boolean> => {
 
     // Connect to MongoDB
     await mongoose.connect(mongoUri);
-    console.log("MongoDB connected successfully.");
+    // console.log("MongoDB connected successfully.");
     return true;
   } catch (error: unknown) {
     // Handle the error properly
