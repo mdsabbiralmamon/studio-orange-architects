@@ -1,7 +1,7 @@
 "use client"
 import Footer from '@/components/frontend/shared/Footer/Footer';
 import Navbar from '@/components/frontend/shared/Navbar/Navbar';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
@@ -56,7 +56,7 @@ const Page = () => {
                             return (
                                 <div key={journal._id} className="mb-6">
                                     <div className="sm:grid grid-cols-5 bg-white rounded-xl overflow-hidden items-center gap-10">
-                                        <Image
+                                        <img
                                             width={1920}
                                             height={1080}
                                             className="w-full h-full object-cover object-center transition duration-50 col-span-2 rounded-2xl"
