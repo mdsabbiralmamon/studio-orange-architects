@@ -1,7 +1,7 @@
 "use client";
 
 import axios from "axios";
-import Image from "next/image";
+// import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { PropagateLoader } from "react-spinners"; // Loading spinner
@@ -56,7 +56,7 @@ const Store = () => {
                 key={product._id}
                 className="product-card rounded-xl group hover:bg-gray-100"
               >
-                <Image
+                <img
                   src={product.images[0] || "/placeholder-image.png"} // Fallback image
                   alt={product.name || "Product Image"}
                   width={300}
