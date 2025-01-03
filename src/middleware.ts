@@ -58,5 +58,6 @@ export const config = {
     "/api/posts/:path*",
     "/api/products/:path*",
     "/api/projects/:path*",
+    "/api/manage-site/:path*",
   ],
 };
