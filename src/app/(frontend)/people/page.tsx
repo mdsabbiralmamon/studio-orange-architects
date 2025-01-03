@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "next/image";
+// import Image from "next/image";
 import Footer from "@/components/frontend/shared/Footer/Footer";
 import Navbar from "@/components/frontend/shared/Navbar/Navbar";
 import React, { useState, useEffect } from "react";
@@ -101,7 +101,7 @@ const Page: React.FC = () => {
             className="cursor-pointer overflow-hidden"
             onClick={() => openLightbox(src)}
           >
-            <Image
+            <img
               width={1000}
               height={1000}
               src={src} // src should be the URL string
@@ -141,7 +141,7 @@ const Page: React.FC = () => {
                   {officeGalleries.map((gallery, index) =>
                     gallery.images.map((imageSrc, imageIndex) => (
                       <SwiperSlide key={`${index}-${imageIndex}`}>
-                        <Image
+                        <img
                           width={1000}
                           height={1000}
                           alt={`Gallery image ${imageIndex + 1}`}
@@ -183,7 +183,7 @@ const Page: React.FC = () => {
                 ?.map((person, index) => (
                   <div key={index} className="block cursor-pointer group lg:col-span-1">
                     <div className="relative mb-6">
-                      <Image
+                      <img
                         width={1000}
                         height={1000}
                         src={person.image}
@@ -208,7 +208,7 @@ const Page: React.FC = () => {
                 ?.map((person, index) => (
                   <div key={index} className="block cursor-pointer group lg:col-span-1">
                     <div className="relative mb-6">
-                      <Image
+                      <img
                         width={1000}
                         height={1000}
                         src={person.image}
@@ -233,7 +233,7 @@ const Page: React.FC = () => {
                 ?.map((person, index) => (
                   <div key={index} className="block cursor-pointer group lg:col-span-1">
                     <div className="relative mb-6">
-                      <Image
+                      <img
                         width={1000}
                         height={1000}
                         src={person.image}
@@ -284,7 +284,7 @@ const Page: React.FC = () => {
               >
                 &times;
               </span>
-              <Image
+              <img
                 width={1000}
                 height={1000}
                 src={lightboxImage}
