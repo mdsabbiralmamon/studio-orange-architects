@@ -22,6 +22,9 @@ export async function middleware(request: NextRequest) {
     "/api/projects/delete",
     "/api/projects/new",
     "/api/projects/update",
+    "/api/manage-site/delete",
+    "/api/manage-site/new",
+    "/api/manage-site/update",
   ]; // Add other private routes as needed
 
   // Check if the requested route is a private route
