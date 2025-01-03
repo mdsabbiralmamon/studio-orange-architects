@@ -1,10 +1,29 @@
+import axios from 'axios';
 import Link from 'next/link';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { CiFacebook, CiInstagram } from 'react-icons/ci';
 import { FaLinkedinIn, FaYoutube } from 'react-icons/fa';
 import { FaXTwitter } from 'react-icons/fa6';
 
+interface Social {
+    facebook: string;
+    instagram: string;
+    linkedin: string;
+    youtube: string;
+    twitter: string;
+}
+
 const Footer = () => {
+    const [socialLinks, setSocialLinks] = useState<Social>();
+
+    useEffect(() => {
+        axios.get(`/api/manage-site`)
+            .then((res) => {
+                setSocialLinks(res?.data?.siteInfo?.social);
+            })
+            .catch((err) => console.error('Error fetching navbar images:', err));
+    }, []);
+
     return (
         <footer className="w-full p-14 bg-black">
             <div className="mx-auto text-gray-300  max-w-[1920px]">
@@ -25,19 +44,19 @@ const Footer = () => {
 
                     {/* socials */}
                     <div className="flex h-full items-end space-x-10 lg:justify-end text-2xl ">
-                        <Link className="p-1 rounded-full" href={'https://www.facebook.com/profile.php?id=61568416150416'} target='blank'>
+                        <Link className="p-1 rounded-full" href={socialLinks?.facebook || '#'} target='blank'>
                             <CiFacebook />
                         </Link>
-                        <Link className="p-1 rounded-full" href={'https://www.instagram.com/studio_orange_architects'} target='blank'>
+                        <Link className="p-1 rounded-full" href={socialLinks?.instagram || '#'} target='blank'>
                             <CiInstagram />
                         </Link>
-                        <Link className="p-1 rounded-full" href={'/'} target='blank'>
+                        <Link className="p-1 rounded-full" href={socialLinks?.linkedin || '#'} target='blank'>
                             <FaLinkedinIn />
                         </Link>
-                        <Link className="p-1 rounded-full" href={'/'} target='blank'>
+                        <Link className="p-1 rounded-full" href={socialLinks?.youtube || '#'} target='blank'>
                             <FaYoutube />
                         </Link>
-                        <Link className="p-1 rounded-full" href={'/'} target='blank'>
+                        <Link className="p-1 rounded-full" href={socialLinks?.twitter || '#'} target='blank'>
                             <FaXTwitter />
                         </Link>
                     </div>
