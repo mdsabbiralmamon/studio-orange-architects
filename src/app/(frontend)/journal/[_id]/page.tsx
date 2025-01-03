@@ -3,7 +3,7 @@
 import Footer from '@/components/frontend/shared/Footer/Footer';
 import Navbar from '@/components/frontend/shared/Navbar/Navbar';
 import axios from 'axios';
-import Image from 'next/image';
+// import Image from 'next/image';
 import Link from 'next/link';
 import { useParams } from 'next/navigation';
 import React, { useEffect, useState } from 'react';
@@ -81,7 +81,7 @@ const Page = () => {
                         </div>
                     ) : journal ? (
                         <>
-                            <Image
+                            <img
                                 width={1920}
                                 height={1080}
                                 src={journal.cover}
@@ -107,7 +107,7 @@ const Page = () => {
                                             });
                                             return (
                                                 <div key={journal._id} className="bg-white p-4 rounded-lg shadow-lg">
-                                                    <Image
+                                                    <img
                                                         width={1920}
                                                         height={1080}
                                                         src={journal.cover}
