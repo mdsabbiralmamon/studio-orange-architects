@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 interface Media {
@@ -174,11 +174,9 @@ const UploadPage = () => {
         <div className="preview w-full md:w-1/3 p-2 border border-gray-200 rounded-lg bg-gray-50 flex justify-center items-center">
           {file ? (
             file.type.startsWith('image') ? (
-              <Image
+              <img
                 src={URL.createObjectURL(file)}
                 alt="Preview"
-                width={150}
-                height={150}
                 className="rounded-lg object-cover"
               />
             ) : (
@@ -250,11 +248,9 @@ const UploadPage = () => {
             >
               <div className="media-preview w-full h-48 flex justify-center items-center overflow-hidden rounded-md bg-gray-100">
                 {media.type.startsWith('image') ? (
-                  <Image
+                  <img
                     src={media.url}
                     alt={media.alt || ''}
-                    width={150}
-                    height={150}
                     className="object-cover rounded-md"
                   />
                 ) : (
