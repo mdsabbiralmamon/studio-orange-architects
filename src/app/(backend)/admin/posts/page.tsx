@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 interface Post {
@@ -80,11 +80,11 @@ const PostsPage = () => {
             className="flex items-center bg-white p-4 rounded-md shadow-lg"
           >
             {/* Post Cover */}
-            <Image
-              src={post.cover}
-              alt={post.title}
+            <img
               width={100}
               height={100}
+              src={post.cover}
+              alt={post.title}
               className="w-24 h-24 object-cover rounded-md"
             />
 
