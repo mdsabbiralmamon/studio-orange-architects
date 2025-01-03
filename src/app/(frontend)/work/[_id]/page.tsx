@@ -12,7 +12,7 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import Image from 'next/image';
+// import Image from 'next/image';
 import type { Swiper as SwiperType } from 'swiper';
 import { PropagateLoader } from 'react-spinners';
 import PageTitle from '@/components/PageTitle/PageTitle';
@@ -136,7 +136,7 @@ const SingleProject = () => {
         >
           {sliderImages?.map((image) => (
             <SwiperSlide key={image._id}>
-              <Image
+              <img
                 width={1920}
                 height={1080}
                 src={image.url}
