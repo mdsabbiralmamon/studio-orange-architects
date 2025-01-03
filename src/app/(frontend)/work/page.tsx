@@ -208,7 +208,7 @@ const Page = () => {
 
   return (
     <div className="h-screen">
-      <PageTitle title={`ETHA`} />
+      <PageTitle title={`Work`} />
       <Navbar />
       <div className="max-w-[1440px] xl:mx-auto lg:mx-16 md:mx-10 min-h-screen">
         <Box sx={{ width: "100%" }}>
