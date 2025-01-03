@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 interface Person {
@@ -80,11 +80,11 @@ const PeoplePage = () => {
             className="flex items-center bg-white p-4 rounded-md shadow-lg"
           >
             {/* Person Image */}
-            <Image
-              src={person.image}
-              alt={person.name}
+            <img
               width={100}
               height={100}
+              src={person.image}
+              alt={person.name}
               className="w-24 h-24 object-cover rounded-md"
             />
 
