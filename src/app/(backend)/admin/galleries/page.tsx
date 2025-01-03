@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
 
 interface Gallery {
@@ -42,7 +42,7 @@ const GalleryPage = () => {
     if (!window.confirm(`Are you sure you want to delete this ${type} gallery image?`)) return;
   
     const url = `/api/gallery/${type.toLowerCase()}/manage?id=${id}`;
-    console.log('Request URL:', url); // Log the URL to ensure it's correct
+    // console.log('Request URL:', url); // Log the URL to ensure it's correct
   
     try {
       setLoading(true);
@@ -50,7 +50,7 @@ const GalleryPage = () => {
         method: 'DELETE',
       });
   
-      console.log('Response:', res); // Log the response to debug
+      // console.log('Response:', res); // Log the response to debug
   
       const data = await res.json();
       if (data.success) {
@@ -102,13 +102,13 @@ const GalleryPage = () => {
               {/* Gallery Images */}
               <div className="flex space-x-4">
                 {gallery.images.map((image, idx) => (
-                  <Image
+                  <img
                     key={idx}
                     src={image}
                     alt={`Office Gallery ${idx + 1}`}
+                    className="object-cover rounded-md"
                     width={80}
                     height={80}
-                    className="object-cover rounded-md"
                   />
                 ))}
               </div>
@@ -140,13 +140,13 @@ const GalleryPage = () => {
               {/* Gallery Images */}
               <div className="flex space-x-4">
                 {gallery.images.map((image, idx) => (
-                  <Image
+                  <img
                     key={idx}
                     src={image}
                     alt={`Normal Gallery ${idx + 1}`}
+                    className="object-cover rounded-md"
                     width={80}
                     height={80}
-                    className="object-cover rounded-md"
                   />
                 ))}
               </div>
