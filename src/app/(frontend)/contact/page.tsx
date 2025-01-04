@@ -36,7 +36,7 @@ const Page = () => {
         <>
             <PageTitle title="Studio" />
             <Navbar />
-            <div className="max-w-7xl lg:mx-auto mx-4 sm:mx-4 my-10 h-full">
+            <div className="max-w-7xl lg:mx-auto mx-4 sm:mx-4 my-10 h-full h-screen">
                 <div className="grid lg:grid-cols-2 grid-cols-1">
                     {/* Left Section - Map and Contact Details */}
                     <div className="lg:mb-0 mb-10">
@@ -88,7 +88,7 @@ const Page = () => {
                             Send Us A Message
                         </h2>
                         <form
-                            action="https://formspree.io/f/xannjadp"
+                            action={process.env.NEXT_AUTH_PUBLIC_EMAIL}
                             className="space-y-5"
                             target="_top"
                             method="POST"
