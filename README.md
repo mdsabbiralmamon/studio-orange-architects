@@ -36,3 +36,12 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
 # soa
 # studio-orange-architects
+
+envs:
+
+MONGODB_URI= "Your_URL"
+JWT_SECRET= "Your_URL"
+SESSION_SECRET= "Your_URL"
+NEXTAUTH_SECRET= "Your_URL"
+NEXTAUTH_URL= "Your_URL"
+NEXT_AUTH_PUBLIC_EMAIL= "Your_API_Key"
